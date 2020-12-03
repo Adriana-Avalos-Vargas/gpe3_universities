@@ -94,26 +94,26 @@ function barChart(continent){
   var score = result.map(row=>row.overall_score);
   var ranking = result.map(row=> row.ranking)
   
-  //Data
+  //Trace1 for the Greek Data
    var data = {
-     x: universities,
-     y: score,
+     x: score,
+     y: universities,
      text: ranking,
-     //name: "Continent",
-     type: "bar"
-     //orientation:('h')
+     name: "Continent",
+     type: "bar",
+     orientation:('h')
    };
 
   // Apply the group barmode to the layout
    var layout = {
-    //height: 400,
-    //width: 600,
-    title: "Research Score of each University",
-     
+    height: 400,
+    width: 600,
+     title: "Research Score of each University",
+     barmode: "group"
    };
 
  // Render the plot to the div tag with id "plot"
- Plotly.newPlot("countryG", data, layout);
+ Plotly.newPlot("CountryG", data, layout);
 
 };
 

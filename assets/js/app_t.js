@@ -1,7 +1,7 @@
 console.log("It entered to table data page :)");
 var url = "https://university-ranking.herokuapp.com/api/v1.0/ranking/1/1526";
 
-d3.json(url).then((importedData) => {
+d3.json("universities.json").then((importedData) => {
   //console.log(importedData);
   var sampleData = importedData;
   console.log(sampleData);
