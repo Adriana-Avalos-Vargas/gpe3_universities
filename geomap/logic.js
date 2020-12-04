@@ -1,5 +1,8 @@
+var url = "https://university-ranking.herokuapp.com/api/v1.0/ranking/1/1526";
+
+
 // Use this link to get the json data
-d3.json("universities2.json").then (function(data) {
+d3.json("universities.json").then (function(data) {
   console.log(data);
   
   var americaQuery = data.filter((america) => america.continent === "America");
@@ -11,10 +14,10 @@ d3.json("universities2.json").then (function(data) {
   var asiaQuery = data.filter((asia) => asia.continent === "Asia");
   console.log(asiaQuery);
 
-  var africaQuery = data.filter((africa) => africa.continent === "Asia");
+  var africaQuery = data.filter((africa) => africa.continent === "Africa");
   console.log(africaQuery);
 
-  var oceaniaQuery = data.filter((oceania) => oceania.continent === "Asia");
+  var oceaniaQuery = data.filter((oceania) => oceania.continent === "Oceania");
   console.log(oceaniaQuery);
 
   // Define arrays to hold created universities by country markers
